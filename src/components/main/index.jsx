@@ -2,15 +2,23 @@ import React from 'react';
 // import { browserHistory } from 'react-router';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // import BemyButton from '../button';
-import UserComponent from './user';
+import UserManager from './user';
+import ShoppingList from './shoppingList';
+import History from './history';
 import styles from './main.scss';
 // import animation from './animation.css';
 
 const Main = props => {
-  // const { user } = props;
+  const { userManager, boovatech } = props;
+  const history = [...boovatech.history].filter(item => item.user === userManager.user);
+  // console.log(props);
   return (
     <section className={styles.main}>
-      <UserComponent userManager={props.userManager} actions={props.userActions} />
+      <UserManager userManager={userManager} actions={props.userActions} />
+      <div>
+        <ShoppingList list={boovatech.list} />
+        <History history={history} user={userManager.user} actions={props.actions} />
+      </div>
     </section>
   );
 };

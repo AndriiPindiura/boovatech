@@ -1,8 +1,11 @@
 import React, { PropTypes } from 'react';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // import Helmet from 'react-helmet';
 
 require('../components/main.scss');
 
+injectTapEventPlugin();
 /*
  * React-router's <Router> component renders <Route>'s
  * and replaces `this.props.children` with the proper React Component.
@@ -14,9 +17,11 @@ require('../components/main.scss');
  */
 const App = ({children}) => {
   return (
-    <div>
-      {children}
-    </div>
+    <MuiThemeProvider>
+      <div>
+        {children}
+      </div>
+    </MuiThemeProvider>
   );
 };
 

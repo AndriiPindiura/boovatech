@@ -1,21 +1,62 @@
 & {
-  background: $bg;
+  // background: $bg;
+  position: relative;
   color: $color;
   font-family: "Open Sans";
 
   nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+    p {
+      font-size: 12px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
     a {
+      padding: 5px;
       font-size: 12px;
       cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
-  div {
+  >div {
     display: none;
+    position: absolute;
+    justify-content: flex-end;
+    top: 100%;
+    left: 70%;
+    width: 30%;
+    // margin: 2px 0 0;
+    padding: 10px;
+    background: $bg;
+    z-index: 9;
+
+    >div {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    button {
+      margin: -10px -10px 0;
+      border: 0;
+      outline: 0;
+      transform: scale(.65);
+      background: rgba(0, 0, 0, 0);
+    }
   }
 
   .usermanager {
-    display: block;
+    display: flex;
   }
 
 }
