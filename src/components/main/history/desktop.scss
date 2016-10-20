@@ -41,10 +41,16 @@
         transform: scale(.65);
         cursor: pointer;
       }
+
+      span {
+        font-size: 12px;
+      }
     }
     
     .complete {
-      text-decoration: overline;
+      span {
+        text-decoration: line-through;
+      }
     }
 
     .incomplete {

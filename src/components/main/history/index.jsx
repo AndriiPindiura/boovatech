@@ -14,17 +14,24 @@ class Shopping extends React.Component {
   constructor(props) {
     super(props);
     this.deleteList = this.deleteList.bind(props);
+    this.setComplete = this.setComplete.bind(props);
+  }
+
+  setComplete() {
+    this.actions.completeList(this.shopping);
   }
 
   deleteList() {
-    this.actions.deleteList(this.shopping);
+    this.actions.deleteList(this.shopping.id);
   }
 
   render() {
+    // console.log(this.props.complete);
+    const { shopping } = this.props;
     return (
-      <div>
-        <input type="checkbox" checked={this.props.complete} />
-        <span>{this.props.shopping.date}</span>
+      <div className={shopping.complete ? styles.complete : null}>
+        <input type="checkbox" checked={shopping.complete} onChange={this.setComplete} />
+        <span>{shopping.date}</span>
         <button onClick={this.deleteList}>
           <ContentClose style={{ fill: 'rgba(255, 0, 0, .5)' }} />
         </button>
