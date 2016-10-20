@@ -1,0 +1,21 @@
+& {
+  background: $bg;
+  color: $color;
+  font-family: "Open Sans";
+
+  nav {
+    a {
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+
+  div {
+    display: none;
+  }
+
+  .usermanager {
+    display: block;
+  }
+
+}
