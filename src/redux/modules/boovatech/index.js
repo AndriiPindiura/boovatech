@@ -2,6 +2,7 @@
 const ADDLIST = 'boovatech/boovatech/ADDLIST';
 const DELETELIST = 'boovatech/boovatech/DELETELIST';
 const COMPLETELIST = 'boovatech/boovatech/COMPLETELIST';
+const SELECTLIST = 'boovatech/boovatech/SELECTLIST';
 
 const initialState = {
   history: [
@@ -43,6 +44,10 @@ export default function (state = initialState, action) {
       const history = [...state.history].filter(item => item.id !== action.payload);
       return Object.assign({}, state, { history });
     }
+    case SELECTLIST: {
+      const shoppingList = [...state.history].filter(item => item.id === action.payload)[0];
+      return Object.assign({}, state, { shoppingList });
+    }
     case COMPLETELIST: {
       const history = [...state.history];
       for (let i = 0, l = history.length; i < l; i++) {
@@ -68,4 +73,8 @@ export const deleteList = payload => {
 
 export const completeList = payload => {
   return { type: COMPLETELIST, payload };
+};
+
+export const selectList = payload => {
+  return { type: SELECTLIST, payload };
 };

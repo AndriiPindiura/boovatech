@@ -2,6 +2,7 @@ import React from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ContentClose from 'material-ui/svg-icons/navigation/close';
+// import classNames from 'classnames';
 
 // import ContentRemove from 'material-ui/svg-icons/content/clear';
 // import { browserHistory } from 'react-router';
@@ -15,6 +16,7 @@ class Shopping extends React.Component {
     super(props);
     this.deleteList = this.deleteList.bind(props);
     this.setComplete = this.setComplete.bind(props);
+    this.selectList = this.selectList.bind(props);
   }
 
   setComplete() {
@@ -25,11 +27,18 @@ class Shopping extends React.Component {
     this.actions.deleteList(this.shopping.id);
   }
 
+  selectList() {
+    // console.log(this.shopping.id);
+    this.actions.selectList(this.shopping.id);
+  }
+
   render() {
     // console.log(this.props.complete);
     const { shopping } = this.props;
+    let classes = shopping.complete ? styles.complete : '';
+    classes += this.props.active && this.props.active.id === shopping.id ? styles.active : '';
     return (
-      <div className={shopping.complete ? styles.complete : null}>
+      <div className={classes} onClick={this.selectList}>
         <input type="checkbox" checked={shopping.complete} onChange={this.setComplete} />
         <span>{shopping.date}</span>
         <button onClick={this.deleteList}>
@@ -41,7 +50,7 @@ class Shopping extends React.Component {
 }
 
 const History = props => {
-  // console.log(props);
+  console.log(props);
   // const date = new Date();
   // console.log(`${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`);
   const { history } = props;
@@ -58,7 +67,7 @@ const History = props => {
       </nav>
       <section>
         {history.length > 0 ?
-          history.map(shoppingList => <Shopping key={shoppingList.id} shopping={shoppingList} actions={props.actions} />)
+          history.map(shoppingList => <Shopping key={shoppingList.id} shopping={shoppingList} actions={props.actions} active={props.active} />)
            : null}
       </section>
     </section>

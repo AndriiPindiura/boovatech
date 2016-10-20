@@ -17,7 +17,12 @@ const Main = props => {
       <UserManager userManager={userManager} actions={props.userActions} />
       <div>
         <ShoppingList list={boovatech.list} />
-        <History history={history} user={userManager.user} actions={props.actions} />
+        <History
+          history={history}
+          user={userManager.user}
+          actions={props.actions}
+          active={boovatech.shoppingList}
+        />
       </div>
     </section>
   );
