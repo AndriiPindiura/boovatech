@@ -6,10 +6,10 @@ import ContentClose from 'material-ui/svg-icons/navigation/close';
 
 // import ContentRemove from 'material-ui/svg-icons/content/clear';
 // import { browserHistory } from 'react-router';
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // import BemyButton from '../button';
 import styles from './main.scss';
-// import animation from './animation.css';
+import animation from './animation.css';
 
 class Shopping extends React.Component {
   constructor(props) {
@@ -28,15 +28,13 @@ class Shopping extends React.Component {
   }
 
   selectList() {
-    // console.log(this.shopping.id);
     this.actions.selectList(this.shopping.id);
   }
 
   render() {
-    // console.log(this.props.complete);
     const { shopping } = this.props;
     let classes = shopping.complete ? styles.complete : '';
-    classes += this.props.active && this.props.active.id === shopping.id ? styles.active : '';
+    classes += this.props.active && this.props.active.id === shopping.id ? ' ' + styles.active : '';
     return (
       <div className={classes} onClick={this.selectList}>
         <input type="checkbox" checked={shopping.complete} onChange={this.setComplete} />
@@ -50,7 +48,6 @@ class Shopping extends React.Component {
 }
 
 const History = props => {
-  console.log(props);
   // const date = new Date();
   // console.log(`${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`);
   const { history } = props;
@@ -66,9 +63,26 @@ const History = props => {
         </FloatingActionButton>
       </nav>
       <section>
-        {history.length > 0 ?
-          history.map(shoppingList => <Shopping key={shoppingList.id} shopping={shoppingList} actions={props.actions} active={props.active} />)
-           : null}
+        <ReactCSSTransitionGroup
+          transitionName={{
+            enter: animation.enter,
+            enterActive: animation.enterActive,
+            leave: animation.leave,
+            leaveActive: animation.leaveActive,
+            appear: animation.appear,
+            appearActive: animation.appearActive
+          }}
+          transitionAppear={false}
+          transitionEnter
+          transitionLeave
+          transitionAppearTimeout={800}
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
+          {history.length > 0 ?
+            history.map(shoppingList => <Shopping key={shoppingList.id} shopping={shoppingList} actions={props.actions} active={props.active} />)
+            : null}
+        </ReactCSSTransitionGroup>
       </section>
     </section>
   );
