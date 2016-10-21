@@ -1,15 +1,10 @@
 import React from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
-import ContentArchive from 'material-ui/svg-icons/content/select-all';
 import ContentSave from 'material-ui/svg-icons/content/save';
 import ContentClose from 'material-ui/svg-icons/navigation/close';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-
-// import { browserHistory } from 'react-router';
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-// import BemyButton from '../button';
 import styles from './main.scss';
 import animation from './animation.css';
 
@@ -37,7 +32,7 @@ class ShoppingItem extends React.Component {
     const { item } = this.props;
     return (
       <div>
-        <input type="checkbox" onChange={this.completeItem} value={item.comlete} />
+        <input type="checkbox" onChange={this.completeItem} checked={item.complete} />
         <input className={styles.description} value={item.description} onChange={this.changeItem} />
         <button onClick={this.deleteItem}>
           <ContentClose style={{ fill: 'rgba(255, 0, 0, .5)' }} />
@@ -55,12 +50,6 @@ const SoppingList = props => {
         <div>
           <span>{boovatech.shoppingList.date || (new Date()).getDateString()}</span>
           <nav>
-            <FloatingActionButton
-              mini
-              onClick={() => console.log('click')}
-            >
-              <ContentArchive />
-            </FloatingActionButton>
             <input onChange={actions.addShoppingItem} value={boovatech.itemToAdd || ''} />
             <FloatingActionButton
               mini
@@ -83,9 +72,8 @@ const SoppingList = props => {
               transitionAppear={false}
               transitionEnter
               transitionLeave
-              transitionAppearTimeout={800}
               transitionEnterTimeout={500}
-              transitionLeaveTimeout={300}
+              transitionLeaveTimeout={100}
             >
               {boovatech.shoppingList.shoppingList && boovatech.shoppingList.shoppingList.slice ?
                 boovatech.shoppingList.shoppingList.map(item =>

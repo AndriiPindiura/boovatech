@@ -2,6 +2,7 @@ import React from 'react';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ContentClose from 'material-ui/svg-icons/navigation/close';
+import ContentExport from 'material-ui/svg-icons/content/archive';
 // import classNames from 'classnames';
 
 // import ContentRemove from 'material-ui/svg-icons/content/clear';
@@ -48,9 +49,6 @@ class Shopping extends React.Component {
 }
 
 const History = props => {
-  // const date = new Date();
-  // console.log(date.getDateString());
-  // console.log(`${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`);
   const { history } = props;
   return (
     <section className={styles.history}>
@@ -61,6 +59,13 @@ const History = props => {
           disabled={!props.user}
         >
           <ContentAdd />
+        </FloatingActionButton>
+        <FloatingActionButton
+          mini
+          onClick={() => console.log(JSON.stringify(props.history))}
+          disabled={!props.user}
+        >
+          <ContentExport />
         </FloatingActionButton>
       </nav>
       <section>
