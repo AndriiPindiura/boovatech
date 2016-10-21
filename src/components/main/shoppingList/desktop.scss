@@ -1,4 +1,49 @@
 & {
-  width: 75%;
+  width: 70%;
+  flex-grow: 1;
   padding: 20px;
+
+  >div {
+    max-height: calc(100% - 40px);
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .5);
+    overflow-y: auto;
+
+    >span {
+      display: block;
+      margin: 0 auto 10px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      padding: 0 0 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+      input {
+        flex-grow: 1;
+        margin: 0 20px;
+      }
+      
+      button {
+        // margin: 0 20px;
+      }
+    }
+
+    section {
+      max-height: 90%;
+      padding: 0 20px 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    footer {
+      display: flex;
+      justify-content: flex-end;
+      margin: 20px 0 0;
+    }
+  }
 }

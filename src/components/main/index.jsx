@@ -14,14 +14,21 @@ const Main = props => {
   // console.log(props);
   return (
     <section className={styles.main}>
-      <UserManager userManager={userManager} actions={props.userActions} />
+      <UserManager
+        userManager={userManager}
+        actions={props.userActions}
+        />
       <div>
-        <ShoppingList list={boovatech.list} />
-        <History
-          history={history}
+        <ShoppingList
+          actions={props.actions}
+          boovatech={boovatech}
           user={userManager.user}
+        />
+        <History
           actions={props.actions}
           active={boovatech.shoppingList}
+          history={history}
+          user={userManager.user}
         />
       </div>
     </section>

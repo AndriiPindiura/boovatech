@@ -49,6 +49,7 @@ class Shopping extends React.Component {
 
 const History = props => {
   // const date = new Date();
+  // console.log(date.getDateString());
   // console.log(`${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`);
   const { history } = props;
   return (
@@ -56,7 +57,7 @@ const History = props => {
       <nav>
         <FloatingActionButton
           mini
-          onClick={() => console.log('click')}
+          onClick={props.actions.addList}
           disabled={!props.user}
         >
           <ContentAdd />

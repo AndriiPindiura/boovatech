@@ -1,3 +1,4 @@
+import { deselectList } from '../boovatech';
 
 const ADDUSER = 'boovatech/user/ADDUSER';
 const SIGNIN = 'boovatech/user/SIGNIN';
@@ -48,18 +49,26 @@ export const close = () => {
   return { type: CLOSE };
 };
 
-export const login = payload => {
-  return { type: LOGIN, payload: payload.target.value };
+const loginAc = payload => {
+  return { type: LOGIN, payload };
 };
 
-const register = payload => {
+export const login = payload => {
+  return (dispatch) => {
+    dispatch(deselectList());
+    dispatch(loginAc(payload.target.value));
+  };
+};
+
+const registerAc = payload => {
   return { type: REGISTER, payload };
 };
 
 export const registerUser = payload => {
   return dispatch => {
     if (payload.keyCode === 13) {
-      dispatch(register(payload.target.value));
+      dispatch(deselectList());
+      dispatch(registerAc(payload.target.value));
     }
   };
 };
