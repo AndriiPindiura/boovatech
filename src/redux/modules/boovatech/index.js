@@ -22,7 +22,7 @@ const initialState = {
         {id: 'lcnvtp-4lp-76c-cqp-pa1twyian', description: 'Постель нам', complete: true}
       ],
       user: 'Andrii Pindiura',
-      id: '7ysohg-m4f-q3g-4dg-880mhmggd',
+      id: '7ysohg-m4f-q3g-4dg-880mhmgga',
       date: '2016/10/21'
     },
     {
@@ -39,7 +39,7 @@ const initialState = {
         {id: '62uhjh-rrj-iug-u8v-hm6yuzkjd', description: 'Машинка от окатышков', complete: true}
       ],
       user: 'Andrii Pindiura',
-      id: 'xlgl3c-2my-qjr-d23-pnyyda0of',
+      id: 'xlgl3c-2my-qjr-d23-pnyyda0ob',
       date: '2016/10/20'
     },
     {
@@ -57,7 +57,7 @@ const initialState = {
         {id: 'jae4qu-g37-nos-suw-8s4kboq37', description: 'Чешки ', complete: false}
       ],
       user: 'Andrii Pindiura',
-      id: 'wrhgd8-7lo-5u1-pbh-ve1qvbw6g',
+      id: 'wrhgd8-7lo-5u1-pbh-ve1qvbw6c',
       date: '2016/10/19'
     },
     {
@@ -69,7 +69,7 @@ const initialState = {
         {id: '4tykq6-gwr-lm6-ybj-fva721tuk', description: 'Луке', complete: false}
       ],
       user: 'Andrii Pindiura',
-      id: 'geiij3-j6u-a9u-9vp-zcjqk3hc1',
+      id: 'geiij3-j6u-a9u-9vp-zcjqk3hcd',
       date: '2016/10/18'
     },
       {
@@ -81,7 +81,7 @@ const initialState = {
         {id: 'lcnvtp-4lp-76c-cqp-pa1twyian', description: 'Постель нам', complete: true}
       ],
       user: 'aydnep',
-      id: '7ysohg-m4f-q3g-4dg-880mhmggd',
+      id: '7ysohg-m4f-q3g-4dg-880mhmggf',
       date: '2016/10/17'
     },
     {
@@ -98,7 +98,7 @@ const initialState = {
         {id: '62uhjh-rrj-iug-u8v-hm6yuzkjd', description: 'Машинка от окатышков', complete: true}
       ],
       user: 'aydnep',
-      id: 'xlgl3c-2my-qjr-d23-pnyyda0of',
+      id: 'xlgl3c-2my-qjr-d23-pnyyda0og',
       date: '2016/10/16'
     },
     {
@@ -116,7 +116,7 @@ const initialState = {
         {id: 'jae4qu-g37-nos-suw-8s4kboq37', description: 'Чешки ', complete: false}
       ],
       user: 'aydnep',
-      id: 'wrhgd8-7lo-5u1-pbh-ve1qvbw6g',
+      id: 'wrhgd8-7lo-5u1-pbh-ve1qvbw6h',
       date: '2016/10/15'
     },
     {
@@ -128,7 +128,7 @@ const initialState = {
         {id: '4tykq6-gwr-lm6-ybj-fva721tuk', description: 'Луке', complete: false}
       ],
       user: 'aydnep',
-      id: 'geiij3-j6u-a9u-9vp-zcjqk3hc1',
+      id: 'geiij3-j6u-a9u-9vp-zcjqk3hci',
       date: '2016/10/14'
     },
       {
@@ -140,7 +140,7 @@ const initialState = {
         {id: 'lcnvtp-4lp-76c-cqp-pa1twyian', description: 'Постель нам', complete: true}
       ],
       user: 'Renata Pindiura',
-      id: '7ysohg-m4f-q3g-4dg-880mhmggd',
+      id: '7ysohg-m4f-q3g-4dg-880mhmggj',
       date: '2016/10/13'
     },
     {
@@ -157,7 +157,7 @@ const initialState = {
         {id: '62uhjh-rrj-iug-u8v-hm6yuzkjd', description: 'Машинка от окатышков', complete: true}
       ],
       user: 'Renata Pindiura',
-      id: 'xlgl3c-2my-qjr-d23-pnyyda0of',
+      id: 'xlgl3c-2my-qjr-d23-pnyyda0ok',
       date: '2016/10/12'
     },
     {
@@ -175,7 +175,7 @@ const initialState = {
         {id: 'jae4qu-g37-nos-suw-8s4kboq37', description: 'Чешки ', complete: false}
       ],
       user: 'Renata Pindiura',
-      id: 'wrhgd8-7lo-5u1-pbh-ve1qvbw6g',
+      id: 'wrhgd8-7lo-5u1-pbh-ve1qvbw6l',
       date: '2016/10/11'
     },
     {
@@ -187,7 +187,7 @@ const initialState = {
         {id: '4tykq6-gwr-lm6-ybj-fva721tuk', description: 'Луке', complete: false}
       ],
       user: 'Renata Pindiura',
-      id: 'geiij3-j6u-a9u-9vp-zcjqk3hc1',
+      id: 'geiij3-j6u-a9u-9vp-zcjqk3hcm',
       date: '2016/10/10'
     },
     {
@@ -199,7 +199,7 @@ const initialState = {
         {id: 'lcnvtp-4lp-76c-cqp-pa1twyian', description: 'Постель нам', complete: true}
       ],
       user: 'Anna Cherniakhivska',
-      id: '7ysohg-m4f-q3g-4dg-880mhmggd',
+      id: '7ysohg-m4f-q3g-4dg-880mhmggo',
       date: '2016/10/09'
     },
     {
@@ -216,7 +216,7 @@ const initialState = {
         {id: '62uhjh-rrj-iug-u8v-hm6yuzkjd', description: 'Машинка от окатышков', complete: true}
       ],
       user: 'Anna Cherniakhivska',
-      id: 'xlgl3c-2my-qjr-d23-pnyyda0of',
+      id: 'xlgl3c-2my-qjr-d23-pnyyda0op',
       date: '2016/10/08'
     },
     {
@@ -234,7 +234,7 @@ const initialState = {
         {id: 'jae4qu-g37-nos-suw-8s4kboq37', description: 'Чешки ', complete: false}
       ],
       user: 'Anna Cherniakhivska',
-      id: 'wrhgd8-7lo-5u1-pbh-ve1qvbw6g',
+      id: 'wrhgd8-7lo-5u1-pbh-ve1qvbw6q',
       date: '2016/10/07'
     },
     {
@@ -246,7 +246,7 @@ const initialState = {
         {id: '4tykq6-gwr-lm6-ybj-fva721tuk', description: 'Луке', complete: false}
       ],
       user: 'Anna Cherniakhivska',
-      id: 'geiij3-j6u-a9u-9vp-zcjqk3hc1',
+      id: 'geiij3-j6u-a9u-9vp-zcjqk3hcr',
       date: '2016/10/06'
     },
   ],
@@ -345,6 +345,7 @@ export default function (state = initialState, action) {
     case SAVELIST: {
       const history = [...state.history];
       const shoppingList = Object.assign({}, state.shoppingList);
+      console.log(shoppingList);
       if (!shoppingList.user) {
         shoppingList.user = action.payload;
         shoppingList.id = guid();
