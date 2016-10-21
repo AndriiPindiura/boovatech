@@ -138,7 +138,7 @@ export default function (state = initialState, action) {
       const history = [...state.history];
       const shoppingList = Object.assign({}, state.shoppingList);
       if (!shoppingList.user) {
-        shoppingList.user = action.payload.user;
+        shoppingList.user = action.payload;
         shoppingList.id = guid();
         shoppingList.date = (new Date()).getDateString();
         history.push(shoppingList);
